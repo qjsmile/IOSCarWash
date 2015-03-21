@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -9,26 +9,41 @@
             <objects>
                 <viewController storyboardIdentifier="homepage" id="uEb-pj-Gw0" customClass="HomePageController" customModule="IOSCarWash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qcu-Rc-7be"/>
-                        <viewControllerLayoutGuide type="bottom" id="u3k-gw-VYh"/>
+                        <viewControllerLayoutGuide type="top" id="ccc-re-VZ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lxw-Ih-lMX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SfZ-y6-gCb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="首页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4P-N1-XVY">
-                                <rect key="frame" x="279" y="289" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-ti-PZU">
+                                <rect key="frame" x="0.0" y="36" width="320" height="137"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOu-Mb-VWK">
+                                <rect key="frame" x="0.0" y="192" width="321" height="101"/>
+                                <color key="backgroundColor" red="0.40392160420000001" green="0.56078433989999998" blue="0.80000007149999997" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mzg-wl-Eoy">
+                                <rect key="frame" x="138" y="165" width="45" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.78823536630000002" green="0.92549026010000002" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.97254908080000002" green="0.019607843829999999" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="mzg-wl-Eoy" id="HL9-YQ-Ds3"/>
+                        <outlet property="scrollView" destination="Xpz-ti-PZU" id="PrI-0i-LHk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnm-Ym-7Do" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="364"/>
+            <point key="canvasLocation" x="146" y="343.99999999999994"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
